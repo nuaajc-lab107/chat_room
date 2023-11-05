@@ -3,7 +3,7 @@ import threading
 
 # 设置服务器的IP地址和端口
 HOST = '1.14.63.108'  # 服务器的IP地址
-PORT = 5000
+PORT = 5000   ＃注意使用云服务器时一定要开放端口
 
 # 创建 socket 对象
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -26,7 +26,7 @@ def receive_message():
 # 发送消息给服务器
 def send_message():
     while True:
-        message = input()
+        message = input() ＃这里是输入昵称
         client_socket.sendall(message.encode("utf-8"))
 
 

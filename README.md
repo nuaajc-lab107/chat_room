@@ -20,4 +20,6 @@
 在服务端，我们取消了昵称的要求，这是为了方便将文字转化为数字。在客户端B代码没变。
 
 # 关于Flask_duoji文件夹
+此代码是基于控制舵机的代码发展而来。这里我们创建了一个Flask项目，当运行app.py时，app.py既是一个Flask服务器也是duoji.py聊天室的一个客户，当用户访问Flask客户端时，app.py会向用户返回一个html页面。
+当用户输入数据后，数据会传递给app.py，此时由于app.py是聊天室的客户端，数据会发送给聊天室duoji.py的服务器，这样数据会成功的发送给舵机的客户端，舵机就会转动。
 ![image](https://github.com/nuaajc-lab107/chat_room/blob/main/%E6%97%A0%E6%A0%87%E9%A2%98.png)

@@ -20,4 +20,4 @@
 在服务端，我们取消了昵称的要求，这是为了方便将文字转化为数字。在客户端B代码没变。
 
 # 关于Flask_duoji文件夹
-https://github.com/nuaajc-lab107/chat_room/blob/main/%E6%97%A0%E6%A0%87%E9%A2%98.png
+![image](https://github.com/nuaajc-lab107/chat_room/blob/main/%E6%97%A0%E6%A0%87%E9%A2%98.png)

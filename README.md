@@ -29,3 +29,5 @@
 
 # 关于paizhao文件夹
 paizhao.py是运行在树莓派上的文件，它本质上还是聊天室服务器的一个客户端。当收到“paizhao”消息后，使用opencv拍摄一张照片，然后这张照片会发送到Flask服务器。app.py是Flask服务器，当用户访问Flask时。app.py会向用户返回index.html，这个页面有一个拍照按钮，当用户按下按钮时，Flask会向服务器发送一个“paizhao”消息。此时树莓派上的paizhao.py将执行拍照函数。然后树莓派将会发送图片到Flask服务器。
+
+![image](https://github.com/nuaajc-lab107/chat_room/blob/main/paizhao.png)

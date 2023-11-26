@@ -68,16 +68,16 @@ def receive_message():
     while True:
         try:
             message = client_socket.recv(1024).decode("utf-8")
-            if "l" in message:
+            if "a" in message:
                 left(1)
                 print(message)
-            elif "r" in message:
+            elif "d" in message:
                 right(1)
                 print(message)
-            elif "f" in message:
+            elif "w" in message:
                 forward(1)
                 print(message)
-            elif "b" in message:
+            elif "s" in message:
                 back(1)
                 print(message)
         except Exception as e:

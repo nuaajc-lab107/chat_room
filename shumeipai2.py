@@ -10,7 +10,7 @@ IN3 = 16  # IN3, 右前进
 IN4 = 15  # IN4, 右后退 
 # 设置服务器的IP地址和端口
 HOST = '1.14.63.108'  # 服务器的IP地址
-PORT = 5000
+PORT = 5080
 
 # 创建 socket 对象
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -75,7 +75,7 @@ def receive_message():
                 right(1)
                 print(message)
             elif "f" in message:
-                forward(5)
+                forward(1)
                 print(message)
             elif "b" in message:
                 back(1)
@@ -90,15 +90,6 @@ def send_message():
     while True:
         message = input()
         client_socket.sendall(message.encode("utf-8"))
-
-# 拍照并保存
-def take_picture():
-    cap = cv2.VideoCapture(0)
-    ret, frame = cap.read()
-    if ret:
-        cv2.imwrite('captured_image.jpg', frame)
-        print("照片已保存为 captured_image.jpg")
-    cap.release()
 
 # 创建线程处理发送和接收消息
 receive_thread = threading.Thread(target=receive_message)

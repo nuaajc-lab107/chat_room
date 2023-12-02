@@ -1,6 +1,5 @@
 import socket
 import threading
-import cv2
 import RPi.GPIO as GPIO
 import time
 

@@ -84,15 +84,8 @@ def receive_message():
             client_socket.close()
             break
 
-# 发送消息给服务器
-def send_message():
-    while True:
-        message = input()
-        client_socket.sendall(message.encode("utf-8"))
 
 # 创建线程处理发送和接收消息
 receive_thread = threading.Thread(target=receive_message)
 receive_thread.start()
 
-send_thread = threading.Thread(target=send_message)
-send_thread.start()
